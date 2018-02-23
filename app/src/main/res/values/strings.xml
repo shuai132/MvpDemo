@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MvpDemo</string>
+
+    <string name="notice_url">https://www.baidu.com/</string>
+</resources>

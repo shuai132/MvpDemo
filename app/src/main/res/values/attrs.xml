@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PrefItemView">
+        <attr name="prefIcon" format="reference"/>
+        <attr name="prefName" format="string"/>
+        <attr name="prefFlag" format="boolean"/>
+        <attr name="prefFlagName" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="Keyboard">
+        <attr name="pianoType">
+            <enum name="piano" value="52"/>
+            <enum name="light" value="36"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="TimbreLayerView">
+        <attr name="layerToneColor" format="reference|color"/>
+        <attr name="layerType" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="TimbreSettingSeekBar">
+        <attr name="maxProgress" format="integer"/>
+        <attr name="defaultProgress" format="integer"/>
+        <attr name="symmetry" format="boolean"/>
+    </declare-styleable>
+</resources>
