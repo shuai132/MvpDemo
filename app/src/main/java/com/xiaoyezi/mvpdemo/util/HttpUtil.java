@@ -3,7 +3,7 @@ package com.xiaoyezi.mvpdemo.util;
 import android.content.Intent;
 import android.net.Uri;
 
-import com.xiaoyezi.mvpdemo.app.Application;
+import com.xiaoyezi.mvpdemo.app.MyApplication;
 
 import java.util.regex.Pattern;
 
@@ -23,6 +23,6 @@ public final class HttpUtil {
         Intent intent = new Intent()
                 .setAction("android.intent.action.VIEW")
                 .setData(Uri.parse(url));
-        Application.context().startActivity(intent);
+        MyApplication.getContext().startActivity(intent);
     }
 }

@@ -10,7 +10,7 @@ import android.widget.ListView;
 
 import com.xiaoyezi.mvpdemo.R;
 import com.xiaoyezi.mvpdemo.data.url.UrlItem;
-import com.xiaoyezi.mvpdemo.mvp.BaseActivityView;
+import com.xiaoyezi.mvpdemo.mvp.BaseActivity;
 import com.xiaoyezi.mvpdemo.mvp.main.MainContract;
 import com.xiaoyezi.mvpdemo.mvp.main.MainPresenter;
 import com.xiaoyezi.mvpdemo.ui.Toaster;
@@ -18,16 +18,21 @@ import com.xiaoyezi.mvpdemo.ui.Toaster;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.ButterKnife;
+import javax.inject.Inject;
+
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MainActivity extends BaseActivityView<MainContract.Presenter> implements MainContract.View {
+public class MainActivity extends BaseActivity<MainPresenter> implements MainContract.View {
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
     private List<UrlItem> urlItems = new ArrayList<>();
     private UrlItemAdapter urlItemAdapter;
+
+    @Inject
+    MainPresenter presenter;
 
     @BindView(R.id.et_url)
     EditText etUrl;
@@ -60,11 +65,20 @@ public class MainActivity extends BaseActivityView<MainContract.Presenter> imple
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
         initView();
         showUrlItems(presenter.getAllUrlItems());
+    }
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected MainPresenter getPresenter() {
+        return presenter;
     }
 
     private void initView() {
@@ -88,11 +102,6 @@ public class MainActivity extends BaseActivityView<MainContract.Presenter> imple
             Toaster.showLong(urlItem.url);
             return true;
         });
-    }
-
-    @Override
-    protected MainContract.Presenter getPresenterImpl() {
-        return new MainPresenter();
     }
 
     @Override

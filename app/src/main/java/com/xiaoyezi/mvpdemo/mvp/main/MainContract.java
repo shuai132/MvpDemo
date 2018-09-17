@@ -1,7 +1,7 @@
 package com.xiaoyezi.mvpdemo.mvp.main;
 
 import com.xiaoyezi.mvpdemo.data.url.UrlItem;
-import com.xiaoyezi.mvpdemo.mvp.BaseMvpInterface;
+import com.xiaoyezi.mvpdemo.mvp.BaseMvp;
 
 import java.util.List;
 
@@ -11,12 +11,12 @@ import java.util.List;
 
 public interface MainContract {
 
-    interface View extends BaseMvpInterface.View {
+    interface View extends BaseMvp.View {
 
         void showUrlItems(List<UrlItem> urls);
     }
 
-    interface Presenter extends BaseMvpInterface.Presenter<View> {
+    interface Presenter extends BaseMvp.Presenter<View> {
 
         void saveUrl(String url);
 

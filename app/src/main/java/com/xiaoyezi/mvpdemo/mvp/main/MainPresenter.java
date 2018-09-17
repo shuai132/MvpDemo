@@ -3,6 +3,7 @@ package com.xiaoyezi.mvpdemo.mvp.main;
 import com.xiaoyezi.mvpdemo.data.url.UrlManager;
 import com.xiaoyezi.mvpdemo.data.url.UrlItem;
 import com.xiaoyezi.mvpdemo.mvp.BasePresenter;
+import com.xiaoyezi.mvpdemo.repository.WebServiceRepository;
 import com.xiaoyezi.mvpdemo.ui.Toaster;
 import com.xiaoyezi.mvpdemo.util.HttpUtil;
 
@@ -15,6 +16,10 @@ import java.util.List;
 public final class MainPresenter extends BasePresenter<MainContract.View> implements MainContract.Presenter {
 
     private UrlManager urlManager = UrlManager.getInstance();
+
+    public MainPresenter(WebServiceRepository webServiceRepository) {
+        super(webServiceRepository);
+    }
 
     @Override
     public void saveUrl(String url) {

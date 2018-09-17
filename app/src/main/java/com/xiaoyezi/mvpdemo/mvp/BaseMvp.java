@@ -4,13 +4,13 @@ package com.xiaoyezi.mvpdemo.mvp;
  * Created by liushuai on 2018/2/11.
  */
 
-public interface BaseMvpInterface {
+public interface BaseMvp {
 
     interface View {
         void bindMVP();
     }
 
-    interface Presenter<V extends View> {
+    interface Presenter<V> {
         void attachView(V view);
         void detachView();
         V getView();
