@@ -1,7 +1,7 @@
 package com.xiaoyezi.mvpdemo.api.interceptor;
 
 import com.xiaoyezi.mvpdemo.api.ApiException;
-import com.xiaoyezi.mvpdemo.util.DeviceUtil;
+import com.xiaoyezi.mvpdemo.utils.DeviceUtil;
 
 import java.io.IOException;
 

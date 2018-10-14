@@ -1,5 +1,6 @@
 package com.xiaoyezi.mvpdemo.di;
 
+import com.xiaoyezi.mvpdemo.api.ApiModule;
 import com.xiaoyezi.mvpdemo.app.MyApplication;
 
 import javax.inject.Singleton;
@@ -13,7 +14,7 @@ import dagger.android.AndroidInjectionModule;
         ApiModule.class,
         AndroidInjectionModule.class,
         RepositoryModule.class,
-        ActivityModule.class
+        ActivityBindingModule.class
 })
 public interface AppComponent {
     void inject(MyApplication application);

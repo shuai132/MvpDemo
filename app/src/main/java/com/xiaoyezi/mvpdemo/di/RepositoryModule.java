@@ -1,7 +1,7 @@
 package com.xiaoyezi.mvpdemo.di;
 
-import com.xiaoyezi.mvpdemo.api.WebService;
-import com.xiaoyezi.mvpdemo.repository.WebServiceRepository;
+import com.xiaoyezi.mvpdemo.api.repository.WebService;
+import com.xiaoyezi.mvpdemo.api.repository.WebServiceRepository;
 
 import javax.inject.Singleton;
 
