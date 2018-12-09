@@ -38,14 +38,14 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     // ButterKnife
-    compile 'com.jakewharton:butterknife:8.8.1'
+    implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
     // DBFlow
     // if Java use this. If using Kotlin do NOT use this.
     annotationProcessor "com.github.Raizlabs.DBFlow:dbflow-processor:$rootProject.ext.dbflowVersion"
-    compile "com.github.Raizlabs.DBFlow:dbflow-core:$rootProject.ext.dbflowVersion"
-    compile "com.github.Raizlabs.DBFlow:dbflow:$rootProject.ext.dbflowVersion"
+    implementation "com.github.Raizlabs.DBFlow:dbflow-core:$rootProject.ext.dbflowVersion"
+    implementation "com.github.Raizlabs.DBFlow:dbflow:$rootProject.ext.dbflowVersion"
 
     // dagger2
     implementation "com.google.dagger:dagger:$rootProject.ext.daggerVersion"
