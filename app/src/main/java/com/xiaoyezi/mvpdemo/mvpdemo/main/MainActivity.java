@@ -69,12 +69,12 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
     }
 
     @Override
-    protected int getLayoutId() {
+    protected int getLayoutResId() {
         return R.layout.activity_main;
     }
 
     @Override
-    protected MainPresenter getPresenter() {
+    protected MainPresenter getPresenterImpl() {
         return presenter;
     }
 

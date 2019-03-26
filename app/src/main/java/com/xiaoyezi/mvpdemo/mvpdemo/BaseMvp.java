@@ -5,11 +5,12 @@ package com.xiaoyezi.mvpdemo.mvpdemo;
  */
 
 public interface BaseMvp {
+
     interface View {
         void bindMVP();
     }
 
-    interface Presenter<V> {
+    interface Presenter<V extends View> {
         void attachView(V view);
         void detachView();
         V getView();
